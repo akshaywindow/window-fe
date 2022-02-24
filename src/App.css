@@ -13,7 +13,7 @@
 }
 
 .container_blur {
-  opacity: 0.5;
+  /* opacity: 0.5; */
   width: 95%;
   height:800px;
   background-image: url('./images/filip-kominik-IHtVbLRjTZU-unsplash.jpg');
@@ -59,7 +59,7 @@
   border: none;
   height: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 369px;
+  /* margin-top: 369px; */
 }
 
 .dropdown_input {
