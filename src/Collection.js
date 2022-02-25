@@ -27,7 +27,7 @@ const Collection = () => {
 
   return (
     <div className="collection">
-      <div style={{ display: 'flex', paddingLeft: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', paddingLeft: '20px', paddingRight: '20px' }}>
         <div>Filter</div>
         <div>Sort By</div>
       </div>
