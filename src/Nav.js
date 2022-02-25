@@ -5,12 +5,12 @@ const Nav= () => {
   return (
     <div className="nav">
       <div>
-        window
+        <a style={{ color: 'black' }} href='/'>window</a>
       <div className="profile">profile</div>
-      </div>
       {/* <li>
         <Link to="/">Window</Link>
       </li> */}
+      </div>
     </div>
   );
 }

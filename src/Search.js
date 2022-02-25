@@ -77,6 +77,7 @@ function Search() {
             the existing site looks like
           */}
         </div>
+        <a href='/collection'>Search Collection</a> 
       </div>
     );
   }
@@ -116,9 +117,6 @@ function Search() {
           { openBool ? openList() : null }
         </div> : null }
       </form>
-      <div style={{ padding: '10px', backgroundColor: 'white', color: 'green'}}>
-        **TESTING** <br/> Lets go to <a href='/collection'>Search Collection</a>
-      </div>
     </div>
   );
 }
