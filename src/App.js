@@ -1,12 +1,12 @@
 import './App.css';
 import Nav from './Nav';
-import Search from './Search';
+import WebRoutes from './WebRoutes';
 
 function App() {
   return (
     <div>
       <Nav />
-      <Search />
+      <WebRoutes />
     </div>
   );
 }
