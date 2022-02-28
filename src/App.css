@@ -95,6 +95,22 @@ input[type="text"]::placeholder {
   float: right;
 }
 
+.searchbar_dropdown {
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
+  margin-top: 6px;
+  width: 500px;
+  overflow: auto;
+}
+
+.searchbar_images {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 .filter_button {
   background: none;
 	color: inherit;
@@ -124,6 +140,12 @@ input[type="text"]::placeholder {
   .websites_dropdown {
     width: 330px;
   }
+  .searchbar_dropdown {
+    width: 330px;
+  }
+  .searchbar_images {
+    width: 70px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -135,6 +157,9 @@ input[type="text"]::placeholder {
   }
   .websites_dropdown {
     width: 230px;
+  }
+  .searchbar_dropdown {
+    width: 250px;
   }
 }
 

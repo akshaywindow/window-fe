@@ -5,7 +5,8 @@ function Search() {
   const [open, setOpen] = useState(null);
   const [openBool, setOpenBool] = useState(false);
   const [websites, setWebsites] = useState(['asos.com', 'zara.com', 'h&m.com', 'bonobos.com', 'ssense.com'])
-  
+  const [trending, setTrending] = useState(['yeezy', 'nike aj1', 'acne jeans', 'zara sale', 'h&m hoodie'])
+  const [searchBarState, setSearchBarState] = useState(true);
   /* 
   useEffect(() => {
     fetch(apiurl)
@@ -23,7 +24,29 @@ function Search() {
 
   }
 
-  const openList = () => {
+  const searchBarDropdown = () => {
+    return (
+      <div className="searchbar_dropdown">
+        <div>
+          <p style={{ fontSize: '10px', marginLeft: '20px', fontWeight: 600 }}>TRENDING</p>
+        </div>
+        <div style={{ padding: '5px', marginBottom: '50px' }}>
+          <ul style={{ display: 'flex', marginTop: '-12px' }}>
+            {trending.map(trend => (
+              <div style={{ marginLeft: '10px', marginRight: '10px' }}>
+                <img 
+                  className="searchbar_images"
+                  src={require("./images/snkr.png")} />
+                <li className="website_li">{trend}</li>
+              </div>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  const openWebsites = () => {
     return (
       <div className="websites_dropdown">
         <input
@@ -98,8 +121,23 @@ function Search() {
   }
 
   const openDropDown = (event) => {
+    console.log(event.target.innerText)
     setOpen(event.target.innerText)
     setOpenBool(!openBool)
+  }
+
+  const onChange = (e) => {
+    console.log(e.target.value)
+  }
+
+  const onFocusState = () => {
+    setSearchBarState(!searchBarState)
+    setOpenBool(false);
+  }
+  
+  const onBlurState = () => {
+    setSearchBarState(!searchBarState)
+  
   }
 
   return (
@@ -110,6 +148,9 @@ function Search() {
           className={openBool ? "mainInput_open" : "mainInput"}
           placeholder="search"
           type="text"
+          onChange={onChange}
+          onFocus={onFocusState}
+          onBlur={onBlurState}
         />
         <button 
             className="websites_button"
@@ -129,9 +170,8 @@ function Search() {
             <path d="M0 4.94933C0 7.47691 2.05653 9.53343 4.5841 9.53343C5.58364 9.53343 6.49701 9.21174 7.24954 8.67176L10.0758 11.5038C10.208 11.6359 10.3803 11.6991 10.5641 11.6991C10.9547 11.6991 11.2247 11.4061 11.2247 11.0213C11.2247 10.8374 11.1558 10.6708 11.0352 10.5502L8.2261 7.72392C8.81779 6.95416 9.1682 5.99483 9.1682 4.94933C9.1682 2.42176 7.11167 0.365234 4.5841 0.365234C2.05653 0.365234 0 2.42176 0 4.94933ZM0.982307 4.94933C0.982307 2.96174 2.59651 1.34754 4.5841 1.34754C6.57169 1.34754 8.18589 2.96174 8.18589 4.94933C8.18589 6.93692 6.57169 8.55113 4.5841 8.55113C2.59651 8.55113 0.982307 6.93692 0.982307 4.94933Z" fill="white"/>
           </svg>
         </button>
-        { open ? <div>
-          { openBool ? openList() : null }
-        </div> : null }
+          { openBool ? <div>{openWebsites()}</div> : null }
+          { searchBarState ? <div>{searchBarDropdown()}</div> : null }
       </form>
     </div>
   );
