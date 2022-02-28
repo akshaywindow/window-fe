@@ -140,45 +140,6 @@ input[type="text"]::placeholder {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
-  .mainInput {
-    width: 350px;
-  }
-  .mainInput_open {
-    width: 350px;
-  }
-  .websites_dropdown {
-    width: 330px;
-  }
-  .searchbar_dropdown {
-    width: 330px;
-  }
-  .searchbar_images {
-    width: 70px;
-  }
-}
-
-@media (max-width: 600px) {
-  .mainInput {
-    width: 250px;
-  }
-  .mainInput_open {
-    width: 250px;
-  }
-  .websites_dropdown {
-    width: 230px;
-  }
-  .searchbar_dropdown {
-    width: 250px;
-  }
-}
-
-@media (max-width: 600px) {
-  .profile {
-    margin-right: 10px;
-  }
-}
-
 ul {
   padding-inline-start: 0px;
   padding: 10px;
@@ -228,4 +189,49 @@ a {
 .website_li {
   margin-bottom: 10px;
   margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  .mainInput {
+    width: 350px;
+  }
+  .mainInput_open {
+    width: 350px;
+  }
+  .websites_dropdown {
+    width: 330px;
+  }
+  .searchbar_dropdown {
+    width: 330px;
+  }
+  .searchbar_images {
+    width: 70px;
+  }
+  .signup_login {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainInput {
+    width: 250px;
+  }
+  .mainInput_open {
+    width: 250px;
+  }
+  .websites_dropdown {
+    width: 230px;
+  }
+  .searchbar_dropdown {
+    width: 250px;
+  }
+  .signup_login {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile {
+    margin-right: 10px;
+  }
 }
