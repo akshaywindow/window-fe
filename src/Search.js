@@ -1,12 +1,13 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import MobileHome from './MobileHome';
 
 function Search() {
   const [open, setOpen] = useState(null);
   const [openBool, setOpenBool] = useState(false);
   const [websites, setWebsites] = useState(['asos.com', 'zara.com', 'h&m.com', 'bonobos.com', 'ssense.com'])
   const [trending, setTrending] = useState(['yeezy', 'nike aj1', 'acne jeans', 'zara sale', 'h&m hoodie'])
-  const [searchBarState, setSearchBarState] = useState(true);
+  const [searchBarState, setSearchBarState] = useState(false);
   /* 
   useEffect(() => {
     fetch(apiurl)
@@ -21,7 +22,7 @@ function Search() {
 
   const onClick = e => {
     e.preventDefault();
-
+    console.log(e.target.innerText)
   }
 
   const searchBarDropdown = () => {
@@ -79,49 +80,13 @@ function Search() {
           </div>
         </div>
         <hr style={{ borderTop: '0px solid gray' }} />
-        <div>
-        { window.innerWidth > 700 ?
-        <div className="wrapper">
-          <ul>
-            {websites.map(website => (
-              <li className="website_li">{website}</li>
-            ))}
-          </ul>
-          <ul>
-            {websites.map(website => (
-              <li className="website_li">{website}</li>
-            ))}
-          </ul>
-          <ul>
-            {websites.map(website => (
-              <li className="website_li">{website}</li>
-            ))}
-          </ul>
-        </div> : <div className="wrapper">
-          <ul>
-            {websites.map(website => (
-              <li className="website_li">{website}</li>
-            ))}
-          </ul>
-          <ul>
-            {websites.map(website => (
-              <li className="website_li">{website}</li>
-            ))}
-          </ul></div> }
-          {/* 
-            I have three separate ul's, but once the website
-            data is input, we will only have one ul but can 
-            put a break after 5-6 websites just like how 
-            the existing site looks like
-          */}
-        </div>
+        <MobileHome websites={websites} onClick={onClick} />
         <a href='/collection'>Search Collection</a> 
       </div>
     );
   }
 
   const openDropDown = (event) => {
-    console.log(event.target.innerText)
     setOpen(event.target.innerText)
     setOpenBool(!openBool)
   }
@@ -142,7 +107,6 @@ function Search() {
 
   return (
     <div className={openBool ? 'container_blur' : "container"}>
-      {console.log(window.innerWidth)}
       <form onSubmit={onSubmit}>
         <input
           className={openBool ? "mainInput_open" : "mainInput"}
