@@ -1,4 +1,4 @@
-export default function MobileHome({ websites, onClick }) {
+export default function WebsiteDropdown({ websites, onClick }) {
   return (
   <div>
   { window.innerWidth > 700 ?
