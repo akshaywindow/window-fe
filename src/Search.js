@@ -9,7 +9,7 @@ function Search() {
   const [trending, setTrending] = useState(['yeezy', 'nike aj1', 'acne jeans', 'zara sale', 'h&m hoodie'])
   const [searchBarState, setSearchBarState] = useState(false);
   // testing a logged in user //
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   const [savedWebsites, setSavedWebsites] = useState(['athleisure', 'formals', 'clubby', 'PJs', 'essentials']);
   /* 
   useEffect(() => {
