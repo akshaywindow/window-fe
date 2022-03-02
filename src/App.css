@@ -210,6 +210,15 @@ a {
   .signup_login {
     width: 100%;
   }
+  .websites_button {
+    margin-left: -60px;
+  }
+  .searchButton {
+    background-color: transparent;
+  }
+  input[type="text"]::placeholder {
+    padding-left: 23px;
+  }
 }
 
 @media (max-width: 600px) {

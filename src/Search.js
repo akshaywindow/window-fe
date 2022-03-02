@@ -9,7 +9,7 @@ function Search() {
   const [trending, setTrending] = useState(['yeezy', 'nike aj1', 'acne jeans', 'zara sale', 'h&m hoodie'])
   const [searchBarState, setSearchBarState] = useState(false);
   // testing a logged in user //
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [savedWebsites, setSavedWebsites] = useState(['athleisure', 'formals', 'clubby', 'PJs', 'essentials']);
   /* 
   useEffect(() => {
@@ -36,12 +36,12 @@ function Search() {
         <div style={{ padding: '5px', marginBottom: '50px' }}>
           <ul style={{ display: 'flex', marginTop: '-12px' }}>
             {trending.map(trend => (
-              <div style={{ marginLeft: '10px', marginRight: '10px' }}>
+              <button className="website_button_li" style={{ marginLeft: '10px', marginRight: '10px' }}>
                 <img 
                   className="searchbar_images"
                   src={require("./images/snkr.png")} />
                 <li className="website_li">{trend}</li>
-              </div>
+              </button>
             ))}
           </ul>
         </div>
@@ -127,6 +127,8 @@ function Search() {
   return (
     <div className={openBool ? 'container_blur' : "container"}>
       <form onSubmit={onSubmit}>
+      { window.innerWidth > 700 ?
+        <div>
         <input
           className={openBool ? "mainInput_open" : "mainInput"}
           placeholder="search"
@@ -152,7 +154,37 @@ function Search() {
           <svg width="13" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 4.94933C0 7.47691 2.05653 9.53343 4.5841 9.53343C5.58364 9.53343 6.49701 9.21174 7.24954 8.67176L10.0758 11.5038C10.208 11.6359 10.3803 11.6991 10.5641 11.6991C10.9547 11.6991 11.2247 11.4061 11.2247 11.0213C11.2247 10.8374 11.1558 10.6708 11.0352 10.5502L8.2261 7.72392C8.81779 6.95416 9.1682 5.99483 9.1682 4.94933C9.1682 2.42176 7.11167 0.365234 4.5841 0.365234C2.05653 0.365234 0 2.42176 0 4.94933ZM0.982307 4.94933C0.982307 2.96174 2.59651 1.34754 4.5841 1.34754C6.57169 1.34754 8.18589 2.96174 8.18589 4.94933C8.18589 6.93692 6.57169 8.55113 4.5841 8.55113C2.59651 8.55113 0.982307 6.93692 0.982307 4.94933Z" fill="white"/>
           </svg>
+        </button> </div>
+        : 
+        <div>
+        <button
+          style={{ position: 'absolute', marginTop: '3px' }}
+          className="searchButton"
+          type="submit"
+        >
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 4.85352C0 7.52965 2.19857 9.70705 4.90072 9.70705C5.96929 9.70705 6.94575 9.36645 7.75026 8.79473L10.7718 11.7932C10.913 11.9331 11.0972 12 11.2938 12C11.7114 12 12 11.6898 12 11.2823C12 11.0877 11.9263 10.9113 11.7973 10.7836L8.79427 7.79118C9.42682 6.97618 9.80143 5.96047 9.80143 4.85352C9.80143 2.17739 7.60287 0 4.90072 0C2.19857 0 0 2.17739 0 4.85352ZM1.05015 4.85352C1.05015 2.74911 2.77584 1.04004 4.90072 1.04004C7.02559 1.04004 8.75128 2.74911 8.75128 4.85352C8.75128 6.95793 7.02559 8.667 4.90072 8.667C2.77584 8.667 1.05015 6.95793 1.05015 4.85352Z" fill="#808080"/>
+        </svg>
         </button>
+          <input
+          className={openBool ? "mainInput_open" : "mainInput"}
+          placeholder="search"
+          type="text"
+          onChange={onChange}
+          onFocus={onFocusState}
+          onBlur={onBlurState}
+        />
+        <button 
+            className="websites_button"
+            type="submit"
+            onClick={onClick}
+          >
+          <div onClick={openDropDown} style={{ display: 'flex', color: '#585555' }}>
+            <div style={{ fontSize: '15px' }}>website</div>
+          </div>
+        </button>
+         </div>
+        }
           { openBool ? <div>{openWebsites()}</div> : null }
           { searchBarState ? <div>{searchBarDropdown()}</div> : null }
       </form>
