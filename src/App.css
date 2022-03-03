@@ -1,4 +1,4 @@
-.container {
+.main_container {
   width: 95%;
   height:800px;
   background-image: url('./images/filip-kominik-IHtVbLRjTZU-unsplash.jpg');
@@ -41,7 +41,7 @@
   margin-right: 14px;
 }
 
-.mainInput {
+.main_input {
   width: 100%;
   width: 500px;
   padding: 4px;
@@ -51,7 +51,7 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-.mainInput_open {
+.main_input_open {
   width: 100%;
   width: 500px;
   padding: 4px;

@@ -6,6 +6,7 @@ function Search() {
   const [open, setOpen] = useState(null);
   const [openBool, setOpenBool] = useState(false);
   const [websites, setWebsites] = useState(['asos.com', 'zara.com', 'h&m.com', 'bonobos.com', 'ssense.com'])
+  const [selectedWebsites, setSelectedWebsites] = useState([]);
   const [trending, setTrending] = useState(['yeezy', 'nike aj1', 'acne jeans', 'zara sale', 'h&m hoodie'])
   const [searchBarState, setSearchBarState] = useState(false);
   // testing a logged in user //
@@ -23,8 +24,15 @@ function Search() {
 
   }
 
-  const onClick = e => {
+  const onClick = (e) => {
     e.preventDefault();
+    console.log('selected websites: ', selectedWebsites, e)
+    websites.map(website => (
+      website === e.target.innerText && !selectedWebsites.includes(e.target.innerText) ? 
+        setSelectedWebsites([...selectedWebsites, e.target.innerText]) 
+        : null
+    ));
+    // selectedWebsites.includes(e.target.innerText) ? selectedWebsites.filter(websites => websites.id !== id) : null
   }
 
   const searchBarDropdown = () => {
@@ -125,12 +133,12 @@ function Search() {
   }
 
   return (
-    <div className={openBool ? 'container_blur' : "container"}>
+    <div className={openBool ? 'container_blur' : "main_container"}>
       <form onSubmit={onSubmit}>
       { window.innerWidth > 700 ?
         <div>
         <input
-          className={openBool ? "mainInput_open" : "mainInput"}
+          className={openBool ? "main_input_open" : "main_input"}
           placeholder="search"
           type="text"
           onChange={onChange}

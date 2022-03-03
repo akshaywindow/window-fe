@@ -26,13 +26,13 @@ const Collection = () => {
   }
 
   return (
-    <div className="collection">
+    <div className="main_collection">
       <div style={{ display: 'flex', justifyContent: 'space-between', paddingLeft: '20px', paddingRight: '20px' }}>
         <div>Filter</div>
         <div>Sort By</div>
       </div>
       <div style={{ display: 'flex', padding: '20px' }}>
-        <div className="filters">
+        <div className="filters_on_left">
           <div>
             <button 
               className="filter_button"
