@@ -1,7 +1,11 @@
+.window_logo {
+  color: black;
+}
+
 .main_container {
   width: 95%;
   height:800px;
-  background-image: url('./images/filip-kominik-IHtVbLRjTZU-unsplash.jpg');
+  background-image: url('../images/home_bg_img.jpg');
   background-size: cover; /*  or contain depending on what you want */
   background-position: center center;
   background-repeat: no-repeat;
@@ -16,7 +20,7 @@
   /* opacity: 0.5; */
   width: 95%;
   height:800px;
-  background-image: url('./images/filip-kominik-IHtVbLRjTZU-unsplash.jpg');
+  background-image: url('../images/home_bg_img.jpg');
   background-size: cover; /*  or contain depending on what you want */
   background-position: center center;
   background-repeat: no-repeat;
@@ -103,6 +107,8 @@ input[type="text"]::placeholder {
   border-radius: 5px;
   margin-top: 6px;
   float: right;
+  width: 400px;
+  margin-right: -27px;
 }
 
 .searchbar_dropdown {
@@ -131,13 +137,15 @@ input[type="text"]::placeholder {
 	outline: inherit;
 }
 
-.searchButton {
+.search_button_svg {
   width: 23px;
   height: 22px;
   border: none;
   border-radius: 15%;
   background-color: #FA454F;
   cursor: pointer;
+  position:absolute;
+  margin-top: 3px;
 }
 
 ul {
@@ -191,15 +199,127 @@ a {
   margin-right: 10px;
 }
 
+.websites_dropdown_ul {
+  margin-top: -10px;
+}
+
+.filter_sort {
+  display: flex; 
+  justify-content: space-between;
+  padding-left: 20px; 
+  padding-right: 20px;
+}
+
+.outer_div_filters_on_left {
+  display: flex;
+  padding: 20px;
+}
+
+.filter_button_websites_dropdown {
+  display: flex;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.carrot {
+  transform: rotate(180deg); 
+  margin-left: 10px;
+}
+
+.searchbar_trending {
+  font-size: 10px;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.trending_div {
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+.trending_ul {
+  display: flex;
+  margin-top: -12px;
+}
+
+.trending_website_button_li {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.saved_websites_div {
+  margin-bottom: 20px;
+}
+
+.saved_websites_p {
+  color: grey;
+  font-size: 10px;
+}
+
+.svg_div_desktop {
+  margin: auto;
+}
+
+.svg_outer_div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hr_website_dropdown {
+  border: 3px solid #EDEDED;
+}
+
+.your_saved_websites_p {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.your_saved_websites_div {
+  margin: auto; 
+  display: flex; 
+  justify-content: space-evenly;
+  font-size: 14px;
+}
+
+.hr_separater {
+  border-top: 0px solid gray;
+}
+
+.website_outer_div_button {
+  display: flex;
+  color: #585555;
+}
+
+.website_div_text {
+  font-size: 15px;
+}
+
+.signup_login_icon_svg {
+  margin-bottom: 10px
+}
+
 @media (max-width: 700px) {
-  .mainInput {
+  .main_input {
     width: 350px;
   }
-  .mainInput_open {
+  .main_input_open {
     width: 350px;
   }
   .websites_dropdown {
     width: 330px;
+    margin-right: 0px;
   }
   .searchbar_dropdown {
     width: 330px;
@@ -213,7 +333,7 @@ a {
   .websites_button {
     margin-left: -60px;
   }
-  .searchButton {
+  .search_button_svg {
     background-color: transparent;
   }
   input[type="text"]::placeholder {
@@ -222,14 +342,15 @@ a {
 }
 
 @media (max-width: 600px) {
-  .mainInput {
+  .main_input {
     width: 250px;
   }
-  .mainInput_open {
+  .main_input_open {
     width: 250px;
   }
   .websites_dropdown {
     width: 230px;
+    margin-right: 0px;
   }
   .searchbar_dropdown {
     width: 250px;

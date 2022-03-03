@@ -1,5 +1,5 @@
-import './App.css';
-import Nav from './Nav';
+import './Styles/App.css'
+import Nav from './Components/Nav';
 import WebRoutes from './WebRoutes';
 
 function App() {

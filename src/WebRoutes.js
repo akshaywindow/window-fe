@@ -1,7 +1,7 @@
-import './App.css';
-import Search from './Search';
+import './Styles/App.css'
+import Search from './Components/Search';
 import { Routes, Route } from 'react-router-dom';
-import Collection from './Collection';
+import Collection from './Components/Collection';
 
 function WebRoutes() {
   return (

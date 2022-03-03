@@ -3,21 +3,21 @@ export default function WebsiteDropdown({ websites, onClick }) {
   <div>
   { window.innerWidth > 700 ?
   <div className="wrapper">
-    <ul style={{ marginTop: '-10px' }}>
+    <ul className="websites_dropdown_ul">
       {websites.map((website, i) => (
         <li key={i} className="website_li">
           <button data-id={i} onClick={onClick} className="website_button_li">{website}</button>
         </li>
       ))}
     </ul>
-    <ul style={{ marginTop: '-10px' }}>
+    <ul className="websites_dropdown_ul">
       {websites.map((website, i) => (
         <li key={i} className="website_li">
           <button data-id={i} onClick={onClick} className="website_button_li">{website}</button>
         </li>
       ))}
     </ul>
-    <ul style={{ marginTop: '-10px' }}>
+    <ul className="websites_dropdown_ul">
       {websites.map((website, i) => (
         <li key={i} className="website_li">
           <button data-id={i} onClick={onClick} className="website_button_li">{website}</button>
@@ -25,14 +25,14 @@ export default function WebsiteDropdown({ websites, onClick }) {
       ))}
     </ul>
   </div> : <div className="wrapper">
-    <ul style={{ marginTop: '-10px' }}>
+    <ul className="websites_dropdown_ul">
       {websites.map((website, i) => (
         <li key={i} className="website_li">
           <button data-id={i} onClick={onClick} className="website_button_li">{website}</button>
         </li>
       ))}
     </ul>
-    <ul style={{ marginTop: '-10px' }}>
+    <ul className="websites_dropdown_ul">
       {websites.map((website, i) => (
         <li key={i} className="website_li">
           <button data-id={i} onClick={onClick} className="website_button_li">{website}</button>

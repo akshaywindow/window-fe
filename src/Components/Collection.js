@@ -27,21 +27,20 @@ const Collection = () => {
 
   return (
     <div className="main_collection">
-      <div style={{ display: 'flex', justifyContent: 'space-between', paddingLeft: '20px', paddingRight: '20px' }}>
+      <div className="filter_sort">
         <div>Filter</div>
         <div>Sort By</div>
       </div>
-      <div style={{ display: 'flex', padding: '20px' }}>
+      <div className="outer_div_filters_on_left">
         <div className="filters_on_left">
           <div>
             <button 
-              className="filter_button"
-              style={{ display: 'flex', }}
+              className="filter_button_websites_dropdown"
               type="submit"
               onClick={openDropDown}
             >
               <b>Websites</b>
-              <div style={{ transform: 'rotate(180deg)', marginLeft: '10px' }}>^</div>
+              <div className="carrot">^</div>
             </button>
             { open ? <div>
               { openBool ? openList() : null }
@@ -50,13 +49,12 @@ const Collection = () => {
           </div>
           <div>
             <button 
-              className="filter_button"
-              style={{ display: 'flex', }}
+              className="filter_button_websites_dropdown"
               type="submit"
               onClick={openDropDown}
             >
             <b>Category</b>
-            <div style={{ transform: 'rotate(180deg)', marginLeft: '10px' }}>^</div>
+            <div className="carrot">^</div>
             </button>
             { open ? <div>
               { openBool ? openList() : null }
@@ -65,13 +63,12 @@ const Collection = () => {
           </div>
           <div>
             <button 
-              className="filter_button"
-              style={{ display: 'flex', }}
+              className="filter_button_websites_dropdown"
               type="submit"
               onClick={openDropDown}
             >
             <b>Size</b>
-            <div style={{ transform: 'rotate(180deg)', marginLeft: '10px' }}>^</div>
+            <div className="carrot">^</div>
             </button>
             { open ? <div>
               { openBool ? openList() : null }
@@ -80,13 +77,12 @@ const Collection = () => {
           </div>
           <div>
             <button 
-              className="filter_button"
-              style={{ display: 'flex', }}
+              className="filter_button_websites_dropdown"
               type="submit"
               onClick={openDropDown}
             >
             <b>Color</b>
-            <div style={{ transform: 'rotate(180deg)', marginLeft: '10px' }}>^</div>
+            <div className="carrot">^</div>
             </button>
             { open ? <div>
               { openBool ? openList() : null }
@@ -95,13 +91,12 @@ const Collection = () => {
           </div>
           <div>
             <button 
-              className="filter_button"
-              style={{ display: 'flex', }}
+              className="filter_button_websites_dropdown"
               type="submit"
               onClick={openDropDown}
             >
             <b>Neck Line</b>
-            <div style={{ transform: 'rotate(180deg)', marginLeft: '10px' }}>^</div>
+            <div className="carrot">^</div>
             </button>
             { open ? <div>
               { openBool ? openList() : null }
@@ -110,13 +105,12 @@ const Collection = () => {
           </div>
           <div>
             <button 
-              className="filter_button"
-              style={{ display: 'flex', }}
+              className="filter_button_websites_dropdown"
               type="submit"
               onClick={openDropDown}
             >
             <b>Length</b>
-            <div style={{ transform: 'rotate(180deg)', marginLeft: '10px' }}>^</div>
+            <div className="carrot">^</div>
             </button>
             { open ? <div>
               { openBool ? openList() : null }
@@ -124,7 +118,7 @@ const Collection = () => {
             <hr/>
           </div>
         </div>
-        <div style={{ marginLeft: '20px' }}>Cards for products</div>
+        <div>Cards for products</div>
       </div>
     </div>
   );

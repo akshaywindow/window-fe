@@ -5,7 +5,7 @@ const Nav= () => {
   return (
     <div className="nav">
       <div>
-        <a style={{ color: 'black' }} href='/'>window</a>
+        <a className="window_logo" href='/'>window</a>
       <div className="profile">profile</div>
       {/* <li>
         <Link to="/">Window</Link>
