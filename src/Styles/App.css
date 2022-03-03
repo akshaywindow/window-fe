@@ -76,7 +76,7 @@
 }
 
 input[type="text"]::placeholder {  
-  padding-left: 7px;
+  padding-left: 3px;
 } 
 
 .websites_button {
@@ -322,7 +322,7 @@ a {
     margin-right: 0px;
   }
   .searchbar_dropdown {
-    width: 330px;
+    width: 370px;
   }
   .searchbar_images {
     width: 70px;
@@ -336,7 +336,10 @@ a {
   .search_button_svg {
     background-color: transparent;
   }
-  input[type="text"]::placeholder {
+  input[type="text"].dropdown_input {  
+    padding-left: 10px;
+  }
+  input[type="text"].main_input {
     padding-left: 23px;
   }
 }
@@ -350,10 +353,10 @@ a {
   }
   .websites_dropdown {
     width: 230px;
-    margin-right: 0px;
+    margin-right: 
   }
   .searchbar_dropdown {
-    width: 250px;
+    width: 270px;
   }
   .signup_login {
     width: 100%;
