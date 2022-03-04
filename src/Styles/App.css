@@ -1,3 +1,8 @@
+* {
+  /* font-family: 'San Francisco'; */
+  /* src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff"); */
+}
+
 .window_logo {
   color: black;
 }
@@ -48,7 +53,7 @@
 .main_input {
   width: 100%;
   width: 500px;
-  padding: 4px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
   height: 20px;
@@ -58,7 +63,7 @@
 .main_input_open {
   width: 100%;
   width: 500px;
-  padding: 4px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
   height: 20px;
@@ -77,6 +82,7 @@
 
 input[type="text"]::placeholder {  
   padding-left: 3px;
+  font-weight: 600;
 } 
 
 .websites_button {
@@ -138,14 +144,17 @@ input[type="text"]::placeholder {
 }
 
 .search_button_svg {
-  width: 23px;
-  height: 22px;
-  border: none;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
   border-radius: 15%;
   background-color: #FA454F;
-  cursor: pointer;
   position:absolute;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 ul {
@@ -156,6 +165,7 @@ ul {
 
 li {
   list-style-type: none;
+  font-family: 'SF Pro Display'
 }
 
 .wrapper {
@@ -172,8 +182,8 @@ li {
   justify-content: space-evenly;
 }
 
-.signup_login_p {
-  
+.signup_login_a {
+  color: #6188E5;
 }
 
 #svg-container {
@@ -304,10 +314,15 @@ a {
 
 .website_div_text {
   font-size: 15px;
+  margin-right: -5px;
 }
 
 .signup_login_icon_svg {
   margin-bottom: 10px
+}
+
+.chevron {
+  margin-left: 12px;
 }
 
 @media (max-width: 700px) {
@@ -335,6 +350,9 @@ a {
   }
   .search_button_svg {
     background-color: transparent;
+    width: 23px;
+    height: 22px;
+    margin-top: 8px;
   }
   input[type="text"].dropdown_input {  
     padding-left: 10px;

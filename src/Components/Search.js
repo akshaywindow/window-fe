@@ -5,6 +5,8 @@ import SearchIconMobile from '../images/svg/search_icon_mobile.svg';
 import SearchIconWeb from '../images/svg/search_icon_web.svg';
 import SVGDesktop from '../images/svg/svg_desktop.svg';
 import SignupLoginIcon from '../images/svg/signup_login_icon.svg';
+import DownChevron from '../images/svg/downChevron.svg';
+import Seperator from '../images/svg/seperator.svg';
 
 function Search() {
   const [open, setOpen] = useState(null);
@@ -74,17 +76,19 @@ function Search() {
             <p className="saved_websites_p">YOUR SAVED WEBSITES</p>
             <div className="svg_outer_div">
               {window.innerWidth > 700 ? 
-              <div className="svg_div_desktop">
-              <img src={SVGDesktop} />
-                <hr className="hr_website_dropdown" />
-              </div> : null }
+                <div className="svg_div_desktop">
+                <img src={SVGDesktop} />
+                  <hr className="hr_website_dropdown" />
+                {/* <img src={SVGDesktop} />
+                  <hr className="hr_website_dropdown" /> */}
+                </div> : null }
               <div className="signup_login">
                 <div id="svg-container">
                   <img src={SignupLoginIcon} className="signup_login_icon_svg" />
                 </div>
                 <div>
                   <p className="signup_login_p">
-                    <a href="/">Sign up</a> or <a href="/">Login</a> to view <br/> your saved websites
+                    <a className="signup_login_a" href="/">Sign up</a> or <a className="signup_login_a" href="/">Login</a> to view <br/> your saved websites
                   </p>
                 </div>
               </div>
@@ -144,8 +148,9 @@ function Search() {
             onClick={onClick}
           >
           <div onClick={openDropDown} className="website_outer_div_button">
+            {/* <img src={Seperator} /> */}
             <div className="website_div_text">website</div>
-            <div className="carrot">^</div>
+            <img className="chevron" src={DownChevron} />
           </div>
         </button>
         <button
